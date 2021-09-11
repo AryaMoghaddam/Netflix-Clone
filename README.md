@@ -43,9 +43,7 @@ A simple **ReactJS** Netflix homepage clone running on *AstraDB* that leverages 
 
 > Attending the session is not enough. You need to complete the homeworks detailed below and you will get a nice badge.
 
-## Materials for the Session
-
-It doesn't matter if you join our workshop live or you prefer to do at your own pace, we have you covered. In this repository, you'll find everything you need for this workshop:
+## Materials 
 
 - [Slide deck](./slides/slides.pdf)
 - [Discord chat](https://bit.ly/cassandra-workshop)
