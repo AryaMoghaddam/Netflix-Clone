@@ -5,9 +5,8 @@
 [![License Apache2](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Discord](https://img.shields.io/discord/685554030159593522)](https://discord.com/widget?id=685554030159593522&theme=dark)
 
-*50 minutes, Intermediate, [Start Building](#1-login-or-register-to-astradb-and-create-database)*
 
-A simple **ReactJS** Netflix homepage clone running on *AstraDB* that leverages a GraphQL API with *paging* and *infinite scrolling.* The materials has been built with the collaboration of [Ania Kubow](https://www.youtube.com/channel/UC5DNytAJ6_FISueUfzZCVsw) and Datastax developer advocates team.
+A  **ReactJS** Netflix homepage clone running on *AstraDB* that leverages a GraphQL API with *paging* and *infinite scrolling.* The materials has been built with the collaboration of [Ania Kubow](https://www.youtube.com/channel/UC5DNytAJ6_FISueUfzZCVsw).
 
 <!--- ENDEXCLUDE --->
 - [Live Demo](https://workshop-graphql-netflix.netlify.app/) or [Video Walkthrough](https://imgur.com/3ns3UJB)
@@ -60,13 +59,12 @@ A simple **ReactJS** Netflix homepage clone running on *AstraDB* that leverages 
 
 ## 1. Login or Register to AstraDB and create database
 
-> *When creating your instance use the promotion code **ANIA200** to get 200$ of free credit allowing you about 30 million writes + 30 Million reads  + 50GB a month of monthly storage!!*
 
 **`ASTRADB`** is the simplest way to run Cassandra with zero operations at all - just push the button and get your cluster. No credit card required, $25.00 USD credit every month, roughly 5M writes, 30M reads, 40GB storage monthly - sufficient to run small production workloads.  
 
 ✅ **Step 1a:** Click the button to login or register with Datastax. You can use your `Github`, `Google` accounts or register with an `email`.
 
-_Make sure to chose a password with minimum 8 characters, containing upper and lowercase letters, at least one number and special character_
+_Making sure to chose a password with minimum 8 characters, containing upper and lowercase letters, at least one number and special character_
 
 <a href="http://dtsx.io/netflix-workshop-1"><img src="img/create_astra_db.png?raw=true" /></a>
 - <details><summary>Show me!</summary>
@@ -78,11 +76,11 @@ _Make sure to chose a password with minimum 8 characters, containing upper and l
 |---|---|
 |**database name**| `netflix_workshop_db` |
 |**keyspace**| `netflix_keyspace` |
-|**Cloud Provider**| *Use the one you like, click a cloud provider logo,  pick an Area in the list and finally pick a region.* |
+|**Cloud Provider**| *Click a cloud provider logo,  pick an Area in the list and finally pick a region.* |
 
-_You can technically use whatever you want and update the code to reflect the keyspace. This is really to get you on a happy path for the first run._
 
-You will see your new database `pending` in the Dashboard.
+
+ Will see your new database `pending` in the Dashboard.
 
 ![image](./tutorial/images/db-pending.png)
 
@@ -97,7 +95,7 @@ The status will change to `Active` when the database is ready, this will only ta
 
 ✅  **Step 2b:**  Copy the token value (eg `AstraCS:KDfdKeNREyWQvDpDrBqwBsUB:ec80667c....`) in your clipboard and save the CSV, this value would not be provided afterward.
 
-**👁️ Expected output**
+**👁️ output**
 - <details><summary>Show me!</summary>
     <img src="img/astra-create-token.gif?raw=true" />
 </details>
@@ -112,18 +110,18 @@ The status will change to `Active` when the database is ready, this will only ta
 3. Click `GRAPHQL API`
 4. Clik link to you playground.
 
-*As show on the picture below.*
+*As shown on the picture below.*
 ![image](img/open-playground.png?raw=true)
 
-> *Note that values in the picture do no reflect the database name `netflix_workshop_db`, reason is we do not reproduce every pictures each time*
+> *Note that values in the picture do no reflect the database name , reason is we do not reproduce every pictures each time*
 
 ✅  **Step 3b:** In GraphQL Playground, **Populate HTTP HEADER** variable `x-cassandra-token` on the bottom of the page with your token as shown below
 
 ![image](img/graphql-playground.png?raw=true)
 
-✅  **Step 3c:** In GraphQL Playground, create a table with the following mutation, making sure to replace `netflix_keyspace` if you used a different name:
+✅  **Step 3c:** In GraphQL Playground, creating a table with the following mutation, making sure to replace `netflix_keyspace` if you used a different name:
 
-- Copy the following mutation on the left panel
+- Mutation on the left panel
 ```yaml
 mutation {
   reference_list: createTable(
@@ -145,17 +143,16 @@ mutation {
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
-## 4. Insert data in the Table with GraphQL
+## 4. Inserting data in the Table with GraphQL
 
 ✅  **Step 4a:** In graphQL playground, change tab to now use `graphql`. Edit the end of the URl to change from `system` to the name of your keyspace: `netflix_keyspace`
 
-✅  **Step 3b:** Populate **HTTP HEADER** variable `x-cassandra-token` on the bottom of the page with your token as shown below (again !! yes this is not the same tab)
-
+✅  **Step 3b:** Populating **HTTP HEADER** variable `x-cassandra-token` on the bottom of the page with your token as shown below 
 ![image](img/graphql-playground-2.png?raw=true)
 
 ✅  **Step 4c:** In GraphQL Playground,populate the `reference_list` table with the following values
 
-- Copy the following mutation on the left panel
+- Copying the following mutation on the left panel
 
 ```yaml
 mutation insertGenres {
@@ -207,13 +204,13 @@ mutation insertGenres {
 }
 ```
 
-* Use the arrow in the middle of the screen to execute the query
+* Using the arrow in the middle of the screen to execute the query
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
 ## 5. Retrieving list of values
 
-✅  **Step 5a:** In GraphQL Playground, not changing tab (yeah) list values from the table with the following query.
+✅  **Step 5a:** Listing values from the table with the following query.
 
 ```yaml
 query getAllGenre {
@@ -225,15 +222,14 @@ query getAllGenre {
 }
 ```
 
-*👁️ Expected output*
+*👁️ output*
 ![image](img/graphql-playground-3.png?raw=true)
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
 ## 6. Creating a Movies Table
 
-✅  **Step 6a:** Move to tab `GRAPHQL-SCHEMA`, everything should be set, use the following mutation to create a new table:
-_Remember to change the keyspaceName if you used something different.
+✅  **Step 6a:** Moving to tab `GRAPHQL-SCHEMA`,  using the following mutation to create a new table:
 
 ```yaml
 mutation {
@@ -311,14 +307,14 @@ mutation insertMovies {
   }
 ```
 
-*👁️ Expected output*
+*👁️  output*
 ![image](img/graphql-playground-5.png?raw=true)
 
 > ℹ️ You can find more movie data in the `data` folder, however, we will be doing a bulk import of all this data shortly.
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
-## 8. Retrieve values from Movie tables
+## 8. Retrieving values from Movie tables
 
 ✅  **Step 8a:
 
@@ -338,10 +334,10 @@ query getMovieAction {
 }
 ```
 
-*👁️ Expected output*
+*👁️ output*
 ![image](img/graphql-playground-6.png?raw=true)
 
-✅ **Step 8b Enable paging:`
+✅ **Step 8b Enabling paging:`
 
 ```yaml
 query getMovieAction {
@@ -361,11 +357,11 @@ query getMovieAction {
 }
 ```
 
-*👁️ Expected output*
+*👁️ output*
 
 ![image](tutorial/images/playground-2.png?raw=true)
 
-✅ **Step 8c: Fetch next page paging:
+✅ **Step 8c: Fetching next page paging:
 
 ```yaml
 query getMovieAction {
@@ -385,19 +381,19 @@ query getMovieAction {
 }
 ```
  
-*👁️ Expected output*
+*👁️ output*
 
 ![image](tutorial/images/playground-3.png?raw=true)
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
-## 9. Load a CSV DataSet
+## 9. Loading a CSV DataSet
 
-✅ **Step 9a: Download the dataset**
+✅ **Step 9a: Downloading the dataset**
 
 Download the dataset
 
-> * ile opens `movies.csv`. This is important as the filename will be the table name.*
+> * File opens `movies.csv`. This is important as the filename will be the table name.*
 
 <p align="left">
 <a href="https://raw.githubusercontent.com/datastaxdevs/workshop-graphql-netflix/main/data/movies.csv">
@@ -454,7 +450,7 @@ As you can see the operation here is asynchronous.
 
 [🏠 Back to Table of Contents](#table-of-contents)
 
-# Part 2 - Deploy to Production
+# Part 2 - Deploying to Production
 
 ## 1. Deploying to Netlify
 
@@ -600,7 +596,7 @@ gitpod /workspace/workshop-graphql-netflix $
 netlify link
 ```
 
-*👁️ Expected output*
+*👁️ output*
 
 ![image](tutorial/images/netlify-link.png?raw=true)
 
@@ -618,7 +614,7 @@ netlify link
 -->
 
 ## 9. Deploy to production
-Now that you've hooked everything up, time to deplpoy to production.
+ Time to deplpoy to production.
 
   * Run
   ```
