@@ -51,21 +51,6 @@ It doesn't matter if you join our workshop live or you prefer to do at your own 
 - [Discord chat](https://bit.ly/cassandra-workshop)
 - [Questions and Answers](https://community.datastax.com/)
 
-## Homework
-
-<img src="tutorial/images/netflix-badge.png?raw=true" width="200" align="right" />
-
-Don't forget to complete your upgrade and get your verified skill badge! Finish and submit your homework!
-
-1. Complete the practice steps from this repository as described below.
-2. Insert a movie of your choice in the database.
-3. Make screenshots alongside the steps and show us your deployed production Netflix clone up in Netlify.
-4. (Optional extra credit) Watch the 2 hour Ania video [HERE](#video-tutorial-with-ania-kubow), build the app yourself, and show us the completed app.
-5. Submit your homework [here](https://github.com/datastaxdevs/workshop-graphql-netflix/issues/new?assignees=HadesArchitect&labels=homework%2Cpending&template=homework-assignment.md&title=%5BHW%5D+%3CNAME%3E)
-
-That's it, you are done! Expect an email next week!
-  
-# Let's start
 
 ## Table of contents
 
