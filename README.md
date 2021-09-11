@@ -19,12 +19,6 @@ A  **ReactJS** Netflix homepage clone running on *AstraDB* that leverages a Grap
 * Learn about **paging** and **infinite scrolling** in web ui
 * Leverage Netlify and DataStax AstraDB
 
-## Materials 
-
-- [Slide deck](./slides/slides.pdf)
-- [Discord chat](https://bit.ly/cassandra-workshop)
-- [Questions and Answers](https://community.datastax.com/)
-
 
 ## Table of contents
 
